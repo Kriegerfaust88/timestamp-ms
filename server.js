@@ -1,12 +1,18 @@
 var express = require('express')
 var url = require('url')
+var path = require('path')
 var app = express()
 
 app.get('/', function(req, res) {
-    res.send('Enter date as a URL parameter to receive a timestamp back eg. https://boiling-harbor-73097.herokuapp.com//December%2015,%202015')
+    res.sendFile(path.join(__dirname + '/index.html'));
 })
 
 app.get('/:input', function(req, res) {
+    
+/* TODO
+
+   Reformat natural language date output
+*/
     
     var input = req.params.input;
     var validDate = (new Date(input)).getTime() > 0;
