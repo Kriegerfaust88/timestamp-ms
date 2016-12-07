@@ -3,12 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Timestamp Microservice</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
     <body>
-        <p>Enter date as a URL parameter to receive a timestamp back in JSON format.</p>
-        <p>eg. https://boiling-harbor-73097.herokuapp.com/December%2015,%202015</p>
-        <p>Result would be: { "unix": 1450137600, "natural": "December 15, 2015" } </p>
+        <div class ="container" id="main">
+            <h1>API Project: Timestamp Microservice</h1>
+            <div class="jumbotron">
+                <p>Enter date in either UNIX or natural language as a URL parameter to receive a timestamp back in JSON format.</p>
+                <p>Example: https://boiling-harbor-73097.herokuapp.com/December%2015,%202015</p>
+                <p>Result would be: { "unix": 1450137600, "natural": "December 15, 2015" } </p>
+            </div>
+        </div>
     </body>
 </html>
 

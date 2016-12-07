@@ -8,12 +8,9 @@ app.get('/', function(req, res) {
 })
 
 app.get('/:input', function(req, res) {
-    
 /* TODO
-
-   Reformat natural language date output
+   - Reformat natural language date output
 */
-    
     var input = req.params.input;
     var validDate = (new Date(input)).getTime() > 0;
     var isNum = !isNaN(input);
